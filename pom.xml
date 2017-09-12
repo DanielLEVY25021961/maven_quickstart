@@ -121,10 +121,13 @@
 					<artifactId>maven-assembly-plugin</artifactId>
 					<version>3.1.0</version>
 					<configuration>
-						<finalName>${pom.artifactId}-${pom.version}</finalName>
-						<descriptorRefs>
-							<descriptorRef>jar-with-dependencies</descriptorRef>
-						</descriptorRefs>
+						<finalName>${project.artifactId}-${project.version}</finalName>
+						<descriptors>
+							<descriptor>src/assembly/assembly.xml</descriptor>		
+						</descriptors>					
+<!-- 						<descriptorRefs> -->
+<!-- 							<descriptorRef>jar-with-dependencies</descriptorRef> -->
+<!-- 						</descriptorRefs> -->
 						<archive>
 							<index>true</index>
 							<manifest>
@@ -344,13 +347,7 @@
 								<goal>site</goal>
 							</goals>
 							<configuration>
-								<outputDirectory>${project.build.directory}/taget/site</outputDirectory>
-								<reportPlugins>
-									<reportPlugin>
-										<groupId>org.apache.maven.plugins</groupId>
-										<artifactId>maven-project-info-reports-plugin</artifactId>
-									</reportPlugin>
-								</reportPlugins>
+								<outputDirectory>${project.build.directory}/target/site</outputDirectory>
 							</configuration>
 						</execution>
 						<execution>
@@ -360,7 +357,7 @@
 								<goal>deploy</goal>
 							</goals>
 							<configuration>
-								<outputDirectory>${project.build.directory}/taget/site</outputDirectory>
+								<outputDirectory>${project.build.directory}/target/site</outputDirectory>
 								<reportPlugins>
 									<reportPlugin>
 										<groupId>org.apache.maven.plugins</groupId>
@@ -371,16 +368,25 @@
 						</execution>
 					</executions>
 					<configuration>
-						<outputDirectory>${project.build.directory}/taget/site</outputDirectory>
-						<reportPlugins>
-							<reportPlugin>
-								<groupId>org.apache.maven.plugins</groupId>
-								<artifactId>maven-project-info-reports-plugin</artifactId>
-							</reportPlugin>
-						</reportPlugins>
+						<outputDirectory>${project.build.directory}/target/site</outputDirectory>
 					</configuration>
 				</plugin>
 
+<!-- 				<reportPlugins> -->
+<!-- 					<reportPlugin> -->
+<!-- 						<groupId>org.apache.maven.plugins</groupId> -->
+<!-- 						<artifactId>maven-project-info-reports-plugin</artifactId> -->
+<!-- 						</reportPlugin> -->
+<!-- 					</reportPlugins> -->
+<!-- 				<reporting> -->
+<!-- 						<reportPlugins> -->
+<!-- 							<reportPlugin> -->
+<!-- 								<groupId>org.apache.maven.plugins</groupId> -->
+<!-- 								<artifactId>maven-project-info-reports-plugin</artifactId> -->
+<!-- 							</reportPlugin> -->
+<!-- 						</reportPlugins> -->
+<!-- 					</reporting> -->
+<!-- 					</reportPlugins> -->
 
 			</plugins>
 
