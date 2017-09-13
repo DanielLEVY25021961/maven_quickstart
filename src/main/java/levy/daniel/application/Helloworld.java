@@ -38,7 +38,6 @@ public class Helloworld extends Application {
 	/**
 	 * LOG : Log : Logger pour Log4j (utilisant commons-logging).
 	 */
-	@SuppressWarnings("unused")
 	private static final Log LOG = LogFactory.getLog(Helloworld.class);
 	
 	// *************************METHODES************************************/
