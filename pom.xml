@@ -169,6 +169,24 @@
 	    </repository>
 	</repositories>
 
+  				<!-- ================================== -->
+				<!--       PLUGIN REPOSITORIES			-->
+				<!-- ================================== -->	
+  			
+  <pluginRepositories>
+    <pluginRepository>
+      <releases>
+        <updatePolicy>never</updatePolicy>
+      </releases>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+      <id>central</id>
+      <name>Central Repository</name>
+      <url>https://repo.maven.apache.org/maven2</url>
+    </pluginRepository>
+  </pluginRepositories>
+
 
 	<!-- ================================== -->
 	<!--               BUILD                -->
@@ -467,9 +485,6 @@
 							<goals>
 								<goal>site</goal>
 							</goals>
-							<configuration>
-								<outputDirectory>${project.build.directory}/target/site</outputDirectory>
-							</configuration>
 						</execution>
 						<execution>
 							<id>default-deploy</id>
@@ -477,20 +492,8 @@
 							<goals>
 								<goal>deploy</goal>
 							</goals>
-							<configuration>
-								<outputDirectory>${project.build.directory}/target/site</outputDirectory>
-								<reportPlugins>
-									<reportPlugin>
-										<groupId>org.apache.maven.plugins</groupId>
-										<artifactId>maven-project-info-reports-plugin</artifactId>
-									</reportPlugin>
-								</reportPlugins>
-							</configuration>
 						</execution>
 					</executions>
-					<configuration>
-						<outputDirectory>${project.build.directory}/target/site</outputDirectory>
-					</configuration>
 				</plugin>
 
 			</plugins>
