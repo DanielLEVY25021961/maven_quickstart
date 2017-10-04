@@ -268,8 +268,6 @@
 		<!-- Management des plugins -->
 		<!-- ================================== -->
 
-		<pluginManagement>
-
 			<plugins>
 
 				<!-- Scripts particuliers ANT -->
@@ -288,12 +286,12 @@
 					<version>3.1.0</version>
 					<configuration>
 						<finalName>${project.artifactId}-${project.version}</finalName>
-						<descriptors>
-							<descriptor>src/assembly/assembly.xml</descriptor>		
-						</descriptors>					
-<!-- 						<descriptorRefs> -->
-<!-- 							<descriptorRef>jar-with-dependencies</descriptorRef> -->
-<!-- 						</descriptorRefs> -->
+<!-- 						<descriptors> -->
+<!-- 							<descriptor>src/assembly/assembly.xml</descriptor>		 -->
+<!-- 						</descriptors>					 -->
+						<descriptorRefs>
+							<descriptorRef>jar-with-dependencies</descriptorRef>
+						</descriptorRefs>
 						<archive>
 							<index>true</index>
 							<manifest>
@@ -524,8 +522,6 @@
 				</plugin>
 
 			</plugins>
-
-		</pluginManagement>
 
 	</build>
 
