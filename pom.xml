@@ -164,6 +164,70 @@
 		</dependency>
 
 
+		<!-- ================================ -->
+		<!--    dépendances pour Joda Time    -->
+		<!-- ================================ -->		
+		<!-- https://mvnrepository.com/artifact/joda-time/joda-time -->
+		<dependency>
+		    <groupId>joda-time</groupId>
+		    <artifactId>joda-time</artifactId>
+		    <version>2.9.9</version>
+		    <scope>compile</scope>
+		</dependency>
+		<!-- Joda Time avec Hibernate -->
+		<!-- https://mvnrepository.com/artifact/org.jadira.usertype/usertype.core -->
+		<dependency>
+		    <groupId>org.jadira.usertype</groupId>
+		    <artifactId>usertype.core</artifactId>
+		    <version>6.0.1.GA</version>
+		    <scope>compile</scope>
+		</dependency>
+
+
+		<!-- ================================ -->
+		<!--      dépendances pour JPA        -->
+		<!-- ================================ -->		
+		<!-- https://mvnrepository.com/artifact/javax.persistence/persistence-api -->
+		<!-- NE PAS METTRE -->
+<!-- 		<dependency> -->
+<!-- 		    <groupId>javax.persistence</groupId> -->
+<!-- 		    <artifactId>persistence-api</artifactId> -->
+<!-- 		    <version>1.0.2</version> -->
+<!-- 		</dependency> -->
+
+
+		<!-- ====================================================== -->
+		<!--        DEPENDANCES POUR ORM (Hibernate)  				-->
+		<!-- ====================================================== -->	
+		<!-- ESSENTIEL -->	
+		<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
+		<!-- Remplace hibernate-entitymanager, persistence-api, ... -->
+		<dependency>
+		    <groupId>org.hibernate</groupId>
+		    <artifactId>hibernate-core</artifactId>
+		    <version>5.2.10.Final</version>
+		    <scope>compile</scope>
+		</dependency>
+		
+		<!-- LIEN JPA - HIBERNATE -->
+		<!-- https://mvnrepository.com/artifact/org.hibernate.javax.persistence/hibernate-jpa-2.1-api -->
+		<dependency>
+		    <groupId>org.hibernate.javax.persistence</groupId>
+		    <artifactId>hibernate-jpa-2.1-api</artifactId>
+		    <version>1.0.0.Final</version>
+		    <scope>compile</scope>
+		</dependency>
+		
+		<!-- POOL DE CONNEXION c3p0 -->
+		<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-c3p0 -->
+		<dependency>
+		    <groupId>org.hibernate</groupId>
+		    <artifactId>hibernate-c3p0</artifactId>
+		    <version>5.2.10.Final</version>
+		    <scope>compile</scope>
+		</dependency>
+		
+
 		<!-- ====================================================== -->
 		<!--        DEPENDANCES POUR Bases de Données  				-->
 		<!-- ====================================================== -->
